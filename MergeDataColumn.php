@@ -5,6 +5,8 @@ use yii\grid\DataColumn;
 use yii\helpers\ArrayHelper;
 
 class MergeDataColumn extends DataColumn {
+  public $align = "top:left";
+
   public function init() {
     parent::init();
 
@@ -18,12 +20,19 @@ class MergeDataColumn extends DataColumn {
         $rowSpan = 1;
 
         for ($i = $index; $i < count($columnData) - 1; $i++)
-        if ($curr === $columnData[$i + 1])
-          $rowSpan++;
-        else
-          break;
+          if ($curr === $columnData[$i + 1])
+            $rowSpan++;
+          else
+            break;
 
-        return ['rowspan' => $rowSpan];
+        $verticalAlign = explode(":", $this->align)[0];
+        $horizontalAlign = explode(":", $this->align)[1];
+
+        return [
+          'rowspan' => $rowSpan,
+          'style' => "vertical-align: $verticalAlign;".
+                     "text-align: $horizontalAlign"
+        ];
       } else {
         return ['class' => 'hide'];
       }
