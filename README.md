@@ -30,4 +30,10 @@ GridView::widget([
 ]);
 ```
 
+From that:
+
+![Grid with merged cells](grid-first.png)
+
+to this:
+
 ![Grid with merged cells](grid.png)
