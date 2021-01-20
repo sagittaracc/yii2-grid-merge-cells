@@ -1,4 +1,9 @@
 {
     "name": "sagittaracc/yii-grid",
-    "require": {}
+    "require": {},
+	"autoload": {
+		"psr-4": {
+			"sagittaracc\\grid\\": ""
+		}
+	},
 }
