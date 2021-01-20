@@ -2,6 +2,11 @@
 
 Merging cells with the same data in yii gridview widgets
 
+How to install:
+```
+composer require sagittaracc/yii-grid
+```
+
 How to use:
 
 ```php
