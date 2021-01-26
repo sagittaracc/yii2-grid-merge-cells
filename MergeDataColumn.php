@@ -14,7 +14,7 @@ class MergeDataColumn extends DataColumn {
 
     $this->contentOptions = function($model, $key, $index, $column) use ($columnData) {
       $curr = $columnData[$index];
-      $prev = $key > 0 ? $columnData[$index - 1] : null;
+      $prev = $index > 0 ? $columnData[$index - 1] : null;
 
       if ($curr !== $prev) {
         $rowSpan = 1;
