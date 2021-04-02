@@ -1,6 +1,6 @@
-# yii-grid
+# Yii2 Grid merge cells
 
-Merging cells with the same data in yii gridview widgets
+Merging cells with the same data in yii2 gridview widgets
 
 How to install:
 ```
