@@ -1,5 +1,5 @@
 {
-    "name": "sagittaracc/yii-grid",
+    "name": "sagittaracc/yii2-grid-merge-cells",
     "require": {},
 	"autoload": {
 		"psr-4": {
