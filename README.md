@@ -4,7 +4,7 @@ Merging cells with the same data in yii gridview widgets
 
 How to install:
 ```
-composer require sagittaracc/yii-grid
+composer require sagittaracc/yii2-grid-merge-cell
 ```
 
 How to use:
