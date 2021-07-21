@@ -13,14 +13,16 @@ class MergeDataColumn extends DataColumn {
     $columnData = ArrayHelper::getColumn($this->grid->dataProvider->getModels(), $this->attribute);
 
     $this->contentOptions = function($model, $key, $index, $column) use ($columnData) {
-      $curr = $columnData[$index];
-      $prev = $index > 0 ? $columnData[$index - 1] : null;
+      $curr = $columnData[$key];
+      $prev = $index > 0 ? $columnData[$key - 1] : null;
 
       if ($curr !== $prev) {
         $rowSpan = 1;
 
-        for ($i = $index; $i < count($columnData) - 1; $i++)
-          if ($curr === $columnData[$i + 1])
+        while (key($columnData) !== $key) next($columnData);
+
+        for ($i = $index; $i < count($columnData); $i++)
+          if (current($columnData) === next($columnData))
             $rowSpan++;
           else
             break;
